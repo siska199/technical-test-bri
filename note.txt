@@ -1,0 +1,12 @@
+>>Reference:
+1. Setup next auth v5 : https://github.dev/codinginflow/next-auth-v5/tree/12-Deployment
+2. Cheatset prisma :
+- https://gist.github.com/amit08255/2401792f840ca67e1260dbc85881f0aa
+- https://gist.github.com/amit08255/2401792f840ca67e1260dbc85881f0aa
+
+
+>>>Setup husky:
+Reference : https://medium.com/@anoopnayak1/implement-git-hooks-using-husky-with-commitlint-in-nextjs-7ebd45d83be9
+
+>>zod :
+https://blog.stackademic.com/upgrade-your-full-stack-form-validation-with-zod-and-react-hook-form-in-next-js-107b014628a3

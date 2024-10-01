@@ -1,0 +1,99 @@
+{
+  "root": true,
+  "env": { "browser": true, "es2020": true },
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "ignorePatterns": ["dist", ".eslintrc.cjs"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["react-refresh", "react", "prettier"],
+  "rules": {
+    "newline-before-return": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "import/newline-after-import": [
+      "error",
+      {
+        "count": 1
+      }
+    ],
+    "max-statements-per-line": ["warn", { "max": 1 }],
+    "no-nested-ternary": "warn",
+    "no-unneeded-ternary": "warn",
+    "one-var-declaration-per-line": ["warn", "always"],
+    "operator-assignment": ["warn", "always"],
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "off",
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": [
+          {
+            "group": ["../", "./"],
+            "message": "Relative imports are not allowed."
+          }
+        ]
+      }
+    ],
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": ["error", { "extensions": [".tsx"] }],
+    "react/prefer-stateless-function": "error",
+    "react/no-unused-prop-types": "error",
+    "react/jsx-no-useless-fragment": "error",
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "react/jsx-handler-names": [
+      "error",
+      {
+        "eventHandlerPrefix": "handle",
+        "eventHandlerPropPrefix": "on",
+        "checkLocalVariables": true,
+        "checkInlineFunction": true
+      }
+    ],
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "variable",
+        "format": ["camelCase", "PascalCase"]
+      },
+      {
+        "selector": ["function"],
+        "format": ["PascalCase", "camelCase"]
+      },
+      {
+        "selector": "typeLike",
+        "format": ["PascalCase"]
+      },
+      {
+        "selector": "enumMember",
+        "format": ["UPPER_CASE"]
+      }
+    ],
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "CallExpression[callee.object.name='localStorage']",
+        "message": "Do not use `localStorage` directly, use secure local storage"
+      },
+      {
+        "selector": "CallExpression[callee.object.name='sessionStorage']",
+        "message": "Do not use `sessionStorage` directly, use secure session storage"
+      }
+    ]
+  }
+}

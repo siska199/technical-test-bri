@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    @apply box-border p-0 m-0;
+  }
+  html {
+    @apply scroll-smooth;
+  }
+  html,
+  body {
+    @apply max-w-[100vw] w-full h-full  text-body-base;
+  }
+  h1 {
+    @apply text-heading-01;
+  }
+  h2 {
+    @apply text-heading-02;
+  }
+  h3 {
+    @apply text-heading-03;
+  }
+  h4 {
+    @apply text-heading-04;
+  }
+  h5 {
+    @apply text-heading-05;
+  }
+  p {
+    @apply text-body-base text-gray text-justify;
+  }
+}
+
+@layer utilities {
+  /* Bounce effect */
+  .bounce-effect {
+    @apply transition-all duration-[50] hover:scale-[1.03] active:scale-[0.98] disabled:!scale-[1] disabled:cursor-not-allowed;
+  }
+
+  .bounce-effect-disabled {
+    @apply transition-none hover:scale-100 active:scale-100;
+  }
+
+  .cursor-pointer-custome {
+    @apply bounce-effect cursor-pointer;
+  }
+
+  /* Remove background autofill input*/
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  /* Customize input color picker*/
+  input[type='color'] {
+    -webkit-appearance: none;
+    border: 4px solid #e5e7eb;
+    width: 2rem;
+    height: 2rem;
+  }
+  input[type='color']::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+  input[type='color']::-webkit-color-swatch {
+    border: none;
+  }
+
+  /* Customize input number */
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+
+  /* For svf icon set color dinamically */
+  .icon-white path,
+  .icon-white rect,
+  .icon-white circle {
+    @apply !stroke-white;
+  }
+  .icon-white-fill path {
+    @apply fill-white;
+  }
+
+  .icon-black path,
+  .icon-black rect {
+    @apply stroke-black;
+  }
+  .icon-black-fill path {
+    @apply fill-black;
+  }
+
+  .icon-gray path,
+  .icon-gray rect {
+    @apply stroke-gray;
+  }
+  .icon-gray-fill path {
+    @apply fill-gray;
+  }
+
+  .icon-primary path,
+  .icon-primary rect {
+    @apply stroke-primary;
+  }
+  .icon-primary-fill path {
+    @apply fill-primary;
+  }
+
+  .icon-error path,
+  .icon-error rect {
+    @apply stroke-error;
+  }
+  .icon-error-fill path {
+    @apply fill-error;
+  }
+
+  .icon-warning path,
+  .icon-warning rect {
+    @apply !stroke-warning;
+  }
+  .icon-warning-fill path {
+    @apply fill-warning;
+  }
+
+  .icon-success path,
+  .icon-success rect {
+    @apply stroke-success;
+  }
+  .icon-success-fill path {
+    @apply fill-success;
+  }
+
+  /* Customize scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+  ::-webkit-scrollbar-track {
+    box-shadow: none;
+    border-radius: 10px;
+    background: white;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-lg bg-gray-300;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-300;
+  }
+  /* Hide scrollbar */
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none; /* Firefox */
+  }
+
+  /* Tip Tap Custome Style*/
+  .tiptap p.is-editor-empty:first-child::before {
+    color: #adb5bd;
+    content: attr(data-placeholder);
+    float: left;
+    height: 0;
+    pointer-events: none;
+  }
+
+  .text-editor ul,
+  .text-editor ol {
+    list-style: revert;
+    padding-left: 1rem;
+  }
+  .text-editor blockquote {
+    font-style: italic;
+    border-left: 0.25rem solid #888;
+    margin: 1.5rem 0.5rem;
+    padding: 0.5rem;
+  }
+}
