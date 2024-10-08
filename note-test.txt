@@ -1,0 +1,13 @@
+take home test NextJs
+•  ⁠buat website sederhana dengan mengikuti standar ⁠⁠-> https://zonblade.github.io/nextjs-clean-architecture
+•  ⁠⁠minimal memiliki halaman
+  ⁠⁠-> home
+  ⁠⁠-> login
+  ⁠⁠-> profile
+•  ⁠⁠gunakan server component/ dynamic/ next action
+•  ⁠⁠gunakan typescript
+•  ⁠⁠hindari menggunakan <form/>, any, literal string definition
+•  ⁠⁠semakin native typescript semakin bagus
+•  ⁠⁠semakin sedikit library semakin baik
+
+jika memerlukan backend gunakan NestJs
